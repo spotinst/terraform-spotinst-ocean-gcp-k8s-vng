@@ -1,40 +1,28 @@
-# [NAME] Terraform Module
-
-Short description of the module.
-
-## Table of Contents
-
-- [Prerequisites](#prerequisites)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Requirements](#requirements)
-- [Providers](#providers)
-- [Modules](#modules)
-- [Resources](#resources)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Documentation](#documentation)
-- [Getting Help](#getting-help)
-- [Community](#community)
-- [Contributing](#contributing)
-- [License](#license)
+# terraform-spotinst-ocean-gcp-k8s-vng
+Terraform module for Spotinst provider resource `spotinst_ocean_gke_launch_spec`
 
 ## Usage
-
 ```hcl
-module "[NAME]" {
-  source = "spotinst/[NAME]/spotinst"
+module "ocean-gcp-k8s-vng" {
+    source = "spotinst/ocean-gcp-k8s-vng/spotinst"
 
-  ...
-}
+    ocean_id            = module.ocean-gcp-k8s.ocean_id
+    node_pool_name      = "pool-1"
+  }
 ```
 
-## Examples
+## Providers
 
-- [Basic](examples/basic)
+| Name | Version |
+|------|---------|
+| spotinst/spotinst | >= 1.39.0 |
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Modules
+* `ocean-gcp-k8s` - Creates Ocean Cluster [Doc](https://registry.terraform.io/modules/spotinst/ocean-gcp-k8s/spotinst/latest)
+* `ocean-gcp-k8s-vng` - (Optional) Add custom virtual node groups with custom configs [Doc](https://registry.terraform.io/modules/spotinst/ocean-gcp-k8s-vng/spotinst/latest)
+* `ocean-controller` - Create and installs Spot Ocean controller pod [Doc](https://registry.terraform.io/modules/spotinst/ocean-controller/spotinst/latest)
+
 
 ## Documentation
 
@@ -55,8 +43,4 @@ We use GitHub issues for tracking bugs and feature requests. Please use these co
 
 ## Contributing
 
-Please see the [contribution guidelines](.github/CONTRIBUTING.md).
-
-## License
-
-Code is licensed under the [Apache License 2.0](LICENSE).
+Please see the [contribution guidelines](CONTRIBUTING.md).
