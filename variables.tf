@@ -19,26 +19,26 @@ variable "source_image" {
   description = "Image URL"
 }
 variable "taints" {
-  type        = list(object({
-    key       = string
-    value     = string
-    effect    = string
+  type = list(object({
+    key    = string
+    value  = string
+    effect = string
   }))
-  default = null
+  default     = null
   description = "Optionally adds labels to instances launched in an Ocean cluster."
 }
 variable "metadata" {
-  type        = list(object({
-    key       = string
-    value     = string
+  type = list(object({
+    key   = string
+    value = string
   }))
-  default = null
+  default     = null
   description = "(Required only if node_pool_name is not set) Cluster's metadata."
 }
 variable "labels" {
-  type        = list(object({
-    key       = string
-    value     = string
+  type = list(object({
+    key   = string
+    value = string
   }))
   default     = null
   description = "Optionally adds labels to instances launched in an Ocean cluster."
@@ -48,7 +48,7 @@ variable "restrict_scale_down" {
   default     = false
   description = "Boolean. When set to true, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty."
 }
-variable "root_volume_tyoe" {
+variable "root_volume_type" {
   type        = string
   description = "Root volume disk type. Valid values: pd-standard, pd-ssd"
   default     = null
@@ -140,8 +140,8 @@ variable "scheduling_task" {
     gpu_per_unit    = string
     memory_per_unit = string
   })
-  default           = null
-  description       = "Used to define scheduled tasks such as a manual headroom update."
+  default     = null
+  description = "Used to define scheduled tasks such as a manual headroom update."
 }
 
 variable "should_roll" {
