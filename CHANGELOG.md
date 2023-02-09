@@ -6,11 +6,6 @@
 <a name="v0.1.1"></a>
 ## [v0.1.1] (February 9, 2023)
 
-
-
-<a name="list"></a>
-## [list] (February 9, 2023)
-
 - fix - Correct parameter types and format in main.tf and variables.tf ([#2](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/2))
 
 
