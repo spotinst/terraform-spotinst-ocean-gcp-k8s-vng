@@ -17,5 +17,4 @@
 
 
 [Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.1...HEAD
-[v0.1.1]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/list...v0.1.1
-[list]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.0...list
+[v0.1.1]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/0.1.0...v0.1.1
