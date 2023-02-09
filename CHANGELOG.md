@@ -3,11 +3,24 @@
 
 
 
-<a name="v0.1.0"></a>
-## v0.1.0 (November 17, 2022)
+<a name="v0.1.1"></a>
+## [v0.1.1] (February 9, 2023)
 
-- Initial commit
+
+
+<a name="list"></a>
+## [list] (February 9, 2023)
+
+- fix - Correct parameter types and format in main.tf and variables.tf ([#2](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/2))
+
+
+<a name="v0.1.0"></a>
+## v0.1.0 (December 19, 2022)
+
+- Initial commit ([#1](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/1))
 - chore: initial commit
 
 
-[Unreleased]: https://github.com/spotinst/terraform-spotinst-NAME/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.1...HEAD
+[v0.1.1]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/list...v0.1.1
+[list]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.0...list
