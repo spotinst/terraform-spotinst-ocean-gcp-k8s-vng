@@ -50,7 +50,7 @@ variable "restrict_scale_down" {
 }
 variable "root_volume_type" {
   type        = string
-  description = "Root volume disk type. Valid values: pd-standard, pd-ssd"
+  description = "Root volume disk type. Valid values: \"pd-standard\", \"pd-ssd\""
   default     = null
 }
 variable "root_volume_size" {
@@ -139,6 +139,22 @@ variable "scheduling_task" {
     cpu_per_unit    = string
     gpu_per_unit    = string
     memory_per_unit = string
+  })
+  default     = null
+  description = "Used to define scheduled tasks such as a manual headroom update."
+}
+
+## backend_service ##
+variable "network_interfaces" {
+  type = object({
+    network               = bool
+    project_id            = string
+    access_configs        = string
+    name                  = string
+    type                  = string
+    alias_ip_ranges       = string
+    ip_cidr_range         = string
+    subnetwork_range_name = string
   })
   default     = null
   description = "Used to define scheduled tasks such as a manual headroom update."

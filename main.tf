@@ -1,4 +1,4 @@
-### Spot Ocean Launchspec resource - create a launchspec using default node pool and add additional configurations. ###
+### Manages a custom Spotinst Ocean GKE Launch Spec resource. ###
 resource "spotinst_ocean_gke_launch_spec" "launchspec" {
   ocean_id       = var.ocean_id
   node_pool_name = var.node_pool_name
@@ -97,6 +97,20 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
         gpu_per_unit    = scheduling_task.value.gpu_per_unit
         memory_per_unit = scheduling_task.value.memory_per_unit
       }
+    }
+  }
+
+  dynamic "network_interfaces" {
+    for_each = var.network_interfaces != null ? [var.network_interfaces] : []
+    content {
+      network               = network_interfaces.value.network
+      project_id            = network_interfaces.value.project_id
+      access_configs        = network_interfaces.value.access_configs
+      name                  = network_interfaces.value.name
+      type                  = network_interfaces.value.type
+      alias_ip_ranges       = network_interfaces.value.alias_ip_ranges
+      ip_cidr_range         = network_interfaces.value.ip_cidr_range
+      subnetwork_range_name = network_interfaces.value.subnetwork_range_name
     }
   }
 
