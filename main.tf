@@ -103,14 +103,22 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
   dynamic "network_interfaces" {
     for_each = var.network_interfaces != null ? [var.network_interfaces] : []
     content {
-      network               = network_interfaces.value.network
-      project_id            = network_interfaces.value.project_id
-      access_configs        = network_interfaces.value.access_configs
-      name                  = network_interfaces.value.name
-      type                  = network_interfaces.value.type
-      alias_ip_ranges       = network_interfaces.value.alias_ip_ranges
-      ip_cidr_range         = network_interfaces.value.ip_cidr_range
-      subnetwork_range_name = network_interfaces.value.subnetwork_range_name
+      network    = network_interfaces.value.network
+      project_id = network_interfaces.value.project_id
+      dynamic "access_configs" {
+        for_each = var.access_configs != null ? [var.access_configs] : []
+        content {
+          name = network_interfaces.value.name
+          type = network_interfaces.value.type
+        }
+      }
+      dynamic "alias_ip_ranges" {
+        for_each = var.alias_ip_ranges != null ? [var.alias_ip_ranges] : []
+        content {
+          ip_cidr_range         = network_interfaces.value.ip_cidr_range
+          subnetwork_range_name = network_interfaces.value.subnetwork_range_name
+        }
+      }
     }
   }
 
