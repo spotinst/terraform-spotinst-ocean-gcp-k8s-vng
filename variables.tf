@@ -147,17 +147,31 @@ variable "scheduling_task" {
 ## backend_service ##
 variable "network_interfaces" {
   type = object({
-    network               = bool
-    project_id            = string
-    access_configs        = string
-    name                  = string
-    type                  = string
-    alias_ip_ranges       = string
-    ip_cidr_range         = string
+    network    = bool
+    project_id = string
+  })
+  default     = null
+  description = "Used to define network interfaces."
+}
+
+## backend_service ##
+variable "access_configs" {
+  type = object({
+    name = bool
+    type = string
+  })
+  default     = null
+  description = "The network protocol of the VNG."
+}
+
+## backend_service ##
+variable "alias_ip_ranges" {
+  type = object({
+    ip_cidr_range         = bool
     subnetwork_range_name = string
   })
   default     = null
-  description = "Used to define scheduled tasks such as a manual headroom update."
+  description = "use the imported node pool’s associated aliasIpRange to assign secondary IP addresses to the nodes. Cannot be changed after VNG creation."
 }
 
 variable "should_roll" {
