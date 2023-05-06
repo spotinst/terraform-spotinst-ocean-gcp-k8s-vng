@@ -151,7 +151,7 @@ variable "network_interfaces" {
     project_id = string
   })
   default     = null
-  description = "Used to define scheduled tasks such as a manual headroom update."
+  description = "Used to define network interfaces."
 }
 
 ## backend_service ##
