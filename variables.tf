@@ -147,7 +147,7 @@ variable "scheduling_task" {
 ## backend_service ##
 variable "network_interfaces" {
   type = object({
-    network    = bool
+    network    = string
     project_id = string
   })
   default     = null
@@ -157,7 +157,7 @@ variable "network_interfaces" {
 ## backend_service ##
 variable "access_configs" {
   type = object({
-    name = bool
+    name = string
     type = string
   })
   default     = null
@@ -167,7 +167,7 @@ variable "access_configs" {
 ## backend_service ##
 variable "alias_ip_ranges" {
   type = object({
-    ip_cidr_range         = bool
+    ip_cidr_range         = string
     subnetwork_range_name = string
   })
   default     = null
