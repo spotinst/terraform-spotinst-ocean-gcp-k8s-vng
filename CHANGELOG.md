@@ -3,9 +3,16 @@
 
 
 
+<a name="v0.1.4"></a>
+## [v0.1.4] (June 14, 2023)
+
+- fix network inteface variable types ([#9](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/9))
+
+
 <a name="v0.1.3"></a>
 ## [v0.1.3] (May 6, 2023)
 
+- Changelog update ([#8](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/8))
 - Fix network interface structure ([#7](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/7))
 
 
@@ -37,7 +44,8 @@
 - chore: initial commit
 
 
-[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.4...HEAD
+[v0.1.4]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.3...v0.1.4
 [v0.1.3]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.2...v0.1.3
 [v0.1.2]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/list...v0.1.1
