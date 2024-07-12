@@ -5,6 +5,10 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
   name           = var.name == null ? var.node_pool_name : var.name
   source_image   = var.source_image == null ? data.google_compute_image.COS.self_link : var.source_image
 
+  create_options {
+    initial_nodes = var.initial_nodes
+  }
+
   dynamic "metadata" {
     for_each = var.metadata == null ? [] : var.metadata
     content {

@@ -184,3 +184,10 @@ variable "batch_size_percentage" {
   default     = 20
   description = "Sets the percentage of the instances to deploy in each batch."
 }
+
+## create_options ##
+variable "initial_nodes" {
+  type        = number
+  default     = null
+  description = "When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group."
+}
