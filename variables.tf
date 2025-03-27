@@ -191,9 +191,3 @@ variable "initial_nodes" {
   default     = null
   description = "When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group."
 }
-
-variable "scaling_orientation" {
-  type        = string
-  default     = null
-  description = "Set this value to control the approach that Ocean takes when launching nodes"
-}

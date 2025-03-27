@@ -68,7 +68,6 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
 
   strategy {
     preemptible_percentage = var.preemptible_percentage
-    scaling_orientation    = var.scaling_orientation
   }
 
   shielded_instance_config {
