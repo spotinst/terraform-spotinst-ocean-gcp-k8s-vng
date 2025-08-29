@@ -127,6 +127,18 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
     }
   }
 
+  dynamic "filters" {
+    for_each = var.filters != null ? [var.filters] : []
+    content {
+      exclude_families        = filters.value.exclude_families
+      include_families        = filters.value.include_families
+      max_memory_gib          = filters.value.max_memory_gib
+      max_vcpu                = filters.value.max_vcpu
+      min_memory_gib          = filters.value.min_memory_gib
+      min_vcpu                = filters.value.min_vcpu
+    }
+  }
+
   update_policy {
     should_roll = var.should_roll
     roll_config {
