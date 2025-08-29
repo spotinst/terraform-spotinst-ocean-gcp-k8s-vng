@@ -3,9 +3,16 @@
 
 
 
+<a name="v0.4.0"></a>
+## [v0.4.0] (August 29, 2025)
+
+- added `filters` object ([#17](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/17))
+
+
 <a name="v0.3.0"></a>
 ## [v0.3.0] (March 27, 2025)
 
+- changelog v0.3.0 ([#16](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/16))
 - added `scaling_orientation` field in `strategy` object ([#15](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/15))
 - Revert "added `scaling_orientation` field in `strategy` object"
 - added `scaling_orientation` field in `strategy` object
@@ -64,7 +71,8 @@
 - chore: initial commit
 
 
-[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.4.0...HEAD
+[v0.4.0]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.3.0...v0.4.0
 [v0.3.0]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.5...v0.2.0
 [v0.1.5]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.1.4...v0.1.5
