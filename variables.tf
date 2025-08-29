@@ -197,3 +197,17 @@ variable "scaling_orientation" {
   default     = null
   description = "Set this value to control the approach that Ocean takes when launching nodes"
 }
+
+#filters
+variable "filters" {
+  type = object({
+    exclude_families  = optional(list(string), null)
+    include_families  = optional(list(string), null)
+    max_memory_gib    = optional(number, null)
+    max_vcpu          = optional(number, null)
+    min_memory_gib    = optional(number, null)
+    min_vcpu          = optional(number, null)
+  })
+  default     = null
+  description = "The Instance types that match with all filters compose the Ocean's whitelist parameter. Cannot be configured together with cluster's `instance_types`."
+}
