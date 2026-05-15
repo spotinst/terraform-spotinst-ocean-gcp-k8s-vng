@@ -6,6 +6,7 @@
 <a name="v0.6.0"></a>
 ## [v0.6.0] (May 15, 2026)
 
+- Changelog v0.6.0 ([#21](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/21))
 
 
 <a name="v0.5.0"></a>
