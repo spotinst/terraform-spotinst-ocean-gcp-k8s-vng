@@ -113,6 +113,17 @@ variable "local_ssd_count" {
   description = "Defines the number of local SSDs to be attached per node for this VNG."
   default     = null
 }
+variable "local_nvme_ssd_count" {
+  type        = number
+  description = "Defines the number of local NVMe SSDs to be attached per node in raw block mode for this VNG. All instance_types configured in this VNG must support the value of local_nvme_ssd_count. Otherwise, if the Ocean cluster has instance_types on a permit list, at least one must support the value of local_nvme_ssd_count."
+  default     = null
+}
+
+variable "local_ssd_ephemeral_storage_count" {
+  type        = number
+  description = "Defines the number of local SSDs to be used as ephemeral storage per node for this VNG. All instance_types configured in this VNG must support the value of local_ssd_ephemeral_storage_count. Otherwise, if the Ocean cluster has instance_types on a permit list, at least one must support the value of local_ssd_ephemeral_storage_count."
+  default     = null
+}
 variable "max_instance_count" {
   type        = number
   description = "Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0."

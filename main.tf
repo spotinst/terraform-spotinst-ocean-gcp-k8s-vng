@@ -12,7 +12,7 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
   dynamic "metadata" {
     for_each = var.metadata == null ? [] : var.metadata
     content {
-      key   = metadata.key["key"]
+      key   = metadata.value["key"]
       value = metadata.value["value"]
     }
   }
@@ -77,9 +77,16 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
   }
 
   dynamic "storage" {
-    for_each = var.local_ssd_count != null ? [1] : []
+    for_each = (
+    var.local_ssd_count != null ||
+    var.local_nvme_ssd_count != null ||
+    var.local_ssd_ephemeral_storage_count != null
+    ) ? [1] : []
+
     content {
-      local_ssd_count = var.local_ssd_count
+      local_ssd_count                    = var.local_ssd_count
+      local_nvme_ssd_count               = var.local_nvme_ssd_count
+      local_ssd_ephemeral_storage_count  = var.local_ssd_ephemeral_storage_count
     }
   }
 
