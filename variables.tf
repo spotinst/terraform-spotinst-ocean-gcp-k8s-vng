@@ -155,6 +155,15 @@ variable "scheduling_task" {
   description = "Used to define scheduled tasks such as a manual headroom update."
 }
 
+variable "scheduling_shutdown_hours" {
+  description = "An object used to specify times that the nodes in the virtual node group will be taken down."
+  type = object({
+    is_enabled   = optional(bool)
+    time_windows = list(string)
+  })
+  default = null
+}
+
 ## backend_service ##
 variable "network_interfaces" {
   type = object({

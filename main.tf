@@ -112,6 +112,14 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
     }
   }
 
+  dynamic "scheduling_shutdown_hours" {
+    for_each = var.scheduling_shutdown_hours == null ? [] : [var.scheduling_shutdown_hours]
+    content {
+      is_enabled   = scheduling_shutdown_hours.value.is_enabled
+      time_windows = scheduling_shutdown_hours.value.time_windows
+    }
+  }
+
   dynamic "network_interfaces" {
     for_each = var.network_interfaces != null ? [var.network_interfaces] : []
     content {
