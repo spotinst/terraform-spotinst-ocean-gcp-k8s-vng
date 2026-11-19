@@ -3,9 +3,16 @@
 
 
 
+<a name="v0.8.0"></a>
+## [v0.8.0] (November 19, 2026)
+
+- feat(ocean GCP/launchspec): Added support for DynamicVolumeSize object ([#25](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/25))
+
+
 <a name="v0.7.0"></a>
 ## [v0.7.0] (August 14, 2026)
 
+- changelog for v0.7.0 ([#24](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/24))
 - feat(ocean GCP/launchspec): Added support for ShutDownHours field under Scheduling Object. ([#23](https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/issues/23))
 
 
@@ -93,7 +100,8 @@
 - chore: initial commit
 
 
-[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.8.0...HEAD
+[v0.8.0]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.7.0...v0.8.0
 [v0.7.0]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.6.0...v0.7.0
 [v0.6.0]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.5.0...v0.6.0
 [v0.5.0]: https://github.com/spotinst/terraform-spotinst-ocean-gcp-k8s-vng/compare/v0.4.0...v0.5.0
