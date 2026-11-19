@@ -90,6 +90,15 @@ resource "spotinst_ocean_gke_launch_spec" "launchspec" {
     }
   }
 
+  dynamic "dynamic_volume_size" {
+    for_each = var.dynamic_volume_size != null ? [var.dynamic_volume_size] : []
+    content {
+      base_size              = dynamic_volume_size.value.base_size
+      resource               = dynamic_volume_size.value.resource
+      size_per_resource_unit = dynamic_volume_size.value.size_per_resource_unit
+    }
+  }
+
   resource_limits {
     max_instance_count = var.max_instance_count
     min_instance_count = var.min_instance_count

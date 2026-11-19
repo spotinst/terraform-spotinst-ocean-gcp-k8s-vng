@@ -164,6 +164,16 @@ variable "scheduling_shutdown_hours" {
   default = null
 }
 
+variable "dynamic_volume_size" {
+  type = object({
+    base_size              = number
+    resource               = string
+    size_per_resource_unit = number
+  })
+  default = null
+  description = "Dynamic volume size configuration for the VNG"
+}
+
 ## backend_service ##
 variable "network_interfaces" {
   type = object({
